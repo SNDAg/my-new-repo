@@ -7,10 +7,13 @@ function getUsers() {
     return USERS;
 }
 
+
 function banUser(userId) {
     for (let i = 0; i < USERS.length; i++) {
         if (USERS[i].id === userId) {
             USERS[i].isBanned = true;
+            // Change name for privacy as per business requirements
+            USERS[i].name = "Banned User";
             return true;
         }
     }
